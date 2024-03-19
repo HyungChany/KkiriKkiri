@@ -1,17 +1,3 @@
-package com.kkirikkiri.domain.member.dto;
-
-import com.kkirikkiri.domain.member.entity.enums.EnglishLevel;
-import lombok.Getter;
-import lombok.Setter;
-
-@Getter
-@Setter
-public class RegisterRequest {
-
-    private String loginId;
-    private String password;
-    private String nickname;
-    private Integer age;
-    private EnglishLevel level;
-    private String thumbnail;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:820b8a7e1e1b0e51b16d3449c75bfb7a2827999e915427f6872f45d8efa852ba
+size 756
