@@ -1,3 +1,20 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:8711949d75d45595f6cbba82368add69b1c8a2b708dca6b78ea8b3f677abba85
-size 476
+@font-face {
+    font-family: "Ttangsbudaejjigae OTF";
+    font-style: normal;
+    font-weight: 700;
+    src : url("./MainFontOTFBold.otf") format("woff")
+}
+
+@font-face {
+    font-family: "Ttangsbudaejjigae OTF";
+    font-style: normal;
+    font-weight: 500;
+    src : url("./MainFontOTFMedium.otf") format("woff")
+}
+
+@font-face {
+    font-family: "Ttangsbudaejjigae OTF";
+    font-style: normal;
+    font-weight: 300;
+    src : url("./MainFontOTFLight.otf") format("woff")
+}
