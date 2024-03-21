@@ -1,27 +1,3 @@
-import styled from "styled-components";
-
-const CharacterBox = styled.div`
-    position : absolute;
-    width: 39.875rem;
-    background-color : #A7A7A7;
-    height : 15rem;
-    top : 37.63rem;
-    left : 61.12rem;
-    border-radius : 2rem;
-    opacity : 50%;
-    
-`
-// cosnt ImgFormat1 = styled.div`
-    
-// `
-
-const Character = () => {
-    return (
-       <>
-       <CharacterBox></CharacterBox> 
- 
-       </>
-    );
-};
-
-export default Character;
+version https://git-lfs.github.com/spec/v1
+oid sha256:275756b81f324d8d07751a6fbdd853e39ef6da63459aba223e6bb97bb94a669a
+size 944
