@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:af5946769d2b494ba96499ae0ac9a6cb197e43d1e469557f67e41138936006cd
-size 272
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/kkirikkiri.iml" filepath="$PROJECT_DIR$/.idea/kkirikkiri.iml" />
+    </modules>
+  </component>
+</project>
