@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b99c10a9be45a722fb7a82c87bb43fcc66c246882cbf3660a21135c230e69096
-size 183
+## Description ✏
+
+- 페이지/컴포넌트를 구현합니다 or 기능/API를 구현합니다
+
+## Todo 📝
+
+- [ ] todo1
+- [ ] todo2
+
+## ETC 📌
+
+- 남길 말을 적어주세요.
