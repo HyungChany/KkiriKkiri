@@ -1,3 +1,9 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:36d8316fa5c41fb069357e850f2ce6a44c2576ec13bf3d77949a0b061c39d94f
-size 135
+version: '3.8'
+
+services:
+  redis:
+    image: redis:7.2.4
+    container_name: kkiri
+    ports:
+      - "6379:6379"
+    restart: always
