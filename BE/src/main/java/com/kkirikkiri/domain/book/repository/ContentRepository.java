@@ -1,10 +1,3 @@
-package com.kkirikkiri.domain.book.repository;
-
-import com.kkirikkiri.domain.book.entity.Content;
-import org.springframework.data.jpa.repository.JpaRepository;
-
-import java.util.List;
-
-public interface ContentRepository extends JpaRepository<Content, Long> {
-    List<Content> findAllByStoryId(Long storyId);
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:403c88dab6a6dd3eb9c549906eb822c06048bdcd555f15ad51ba0ee3ba5d91e1
+size 521
