@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:59f84fa413fa0dbf5ec4b9f6446cd184bdc7256dcb7d4f0e55eab304451cb711
-size 402
+package com.kkirikkiri.domain.learning.repository;
+
+import com.kkirikkiri.domain.learning.entity.Learning;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.List;
+import java.util.Optional;
+
+public interface LearningRepository extends JpaRepository <Learning, Long> {
+    List<Learning> findAllByStoryId(Long storyId);
+
+    Optional<Learning> findById(Long learningId);
+}

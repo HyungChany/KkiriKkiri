@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5bb231310d4e7c474d09ed9ee7b4b0b41147ccdf9e48dcc1e6635b317976d9bd
-size 359
+package com.kkirikkiri.domain.member.dto;
+
+import jakarta.validation.constraints.NotEmpty;
+import lombok.Getter;
+
+
+@Getter
+public class LoginRequest {
+    @NotEmpty
+    public String loginId;
+
+    @NotEmpty
+//    @Pattern(regexp = "^(?=.*[a-zA-Z])(?=.*\\d)(?=.*\\W).{8,15}$")
+    // 영문, 특수문자 8자 이상 15자 이하
+    public String password;
+}
