@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b0ae963a88000cfcca5558078b48e590709869327614ccb64190477f9f4aa590
-size 378
+package com.kkirikkiri.domain.bookshelf.repository;
+
+import com.kkirikkiri.domain.book.entity.Story;
+import com.kkirikkiri.domain.bookshelf.entity.Bookshelf;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.List;
+
+public interface BookshelfRepository extends JpaRepository<Bookshelf, Long> {
+
+    List<Bookshelf> findByMemberId(Long memberId);
+
+}

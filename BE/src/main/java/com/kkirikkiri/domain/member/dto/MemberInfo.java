@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:067f70a3d6b470b165c3db72d86d252dd7ec8b89e1df95f512357e0a48bf62c3
-size 274
+package com.kkirikkiri.domain.member.dto;
+
+import com.kkirikkiri.domain.member.entity.enums.EnglishLevel;
+import lombok.Builder;
+
+@Builder
+public record MemberInfo(
+        Long id, String loginId, String nickname, String thumbnail, Integer age, EnglishLevel level) {
+
+}
+
+
+
