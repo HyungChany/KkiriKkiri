@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c2b8a1742bf7df2f4c62d11c38f53c2e1254a71e98bb7cf76bd8197f5b74bb96
-size 380
+import styled from 'styled-components'
+
+const Background = styled.div`
+  background: url(${(props) => props.backgroundimage}) center center / cover
+    fixed no-repeat;
+  width: 100vw;
+  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`
+
+export default Background
