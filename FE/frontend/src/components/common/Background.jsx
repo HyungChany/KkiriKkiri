@@ -1,18 +1,3 @@
-import styled from 'styled-components'
-
-const Background = styled.div`
-  background: url(${(props) => props.backgroundimage}) center center / cover
-    fixed no-repeat;
-  width: 100vw;
-  min-height: 100vh;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`
-
-export default Background
+version https://git-lfs.github.com/spec/v1
+oid sha256:d655efbd825058f58b37ecea3fd2656eb39016da1ec296e92023c4d6a2f1b374
+size 376
