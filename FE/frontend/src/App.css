@@ -1,8 +1,3 @@
-@font-face {
-  font-family: 'MyCustomFont';
-  src: url('/fonts/MainFontOTF.otf') format('opentype'); /* OTF 폰트 포맷 */
-}
-
-body {
-  font-family : 'Ttangsbudaejjigae OTF';
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7248385b775cf6d830a8cffae171eddb5444f273b7dc1a93e5a1e01fa5e51927
+size 178
