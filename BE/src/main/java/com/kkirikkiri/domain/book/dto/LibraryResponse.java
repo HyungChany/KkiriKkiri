@@ -1,3 +1,20 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9bc02f0f3e1d134599108166e58e3074e896cf6f5bade4b8a8257913d66441b5
-size 373
+package com.kkirikkiri.domain.book.dto;
+
+import lombok.Builder;
+import lombok.Data;
+
+import java.time.LocalDateTime;
+
+@Data
+@Builder
+public class LibraryResponse {
+
+    private String title;
+    private String author;
+    private String summary;
+    private String imageURL;
+    private Integer download;
+    private LocalDateTime createdAt;
+    private boolean isMine;
+
+}
