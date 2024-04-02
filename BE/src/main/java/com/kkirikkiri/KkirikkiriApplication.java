@@ -1,13 +1,3 @@
-package com.kkirikkiri;
-
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-@SpringBootApplication
-public class KkirikkiriApplication {
-
-	public static void main(String[] args) {
-		SpringApplication.run(KkirikkiriApplication.class, args);
-	}
-//
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:cbeb2903ecc21ae33071d643c74584c2c3164ebb0e398168877d1d7ae4ba2440
+size 317
