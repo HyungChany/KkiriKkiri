@@ -1,3 +1,30 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c36a775ca89b188a34cea728291eaa6787bf404dcde9ab5c7db94e5572fef777
-size 1047
+package com.kkirikkiri.domain.book.service;
+
+import com.kkirikkiri.domain.book.dto.ImageRequest;
+import com.kkirikkiri.domain.book.dto.ImageResponse;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.MediaType;
+import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
+
+@Service
+public class ImageInfoSendTemplate {
+
+    @Value("${myapp.fastApi.endpoint}")
+    private String fastApiEndpoint;
+
+    public void sendGenerateImageRequest(ImageRequest imageRequest) {
+
+        RestTemplate restTemplate = new RestTemplate();
+
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_JSON);
+
+        HttpEntity<ImageRequest> requestEntity = new HttpEntity<>(imageRequest, headers);
+
+        restTemplate.exchange(fastApiEndpoint, HttpMethod.POST, requestEntity, ImageResponse.class);
+    }
+}

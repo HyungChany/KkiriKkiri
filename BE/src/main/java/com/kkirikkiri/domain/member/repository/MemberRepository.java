@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:6e750e6e6584c7e44f0b00ca1636b1bc1d9dc902b92d789111ee4f600282d109
-size 616
+package com.kkirikkiri.domain.member.repository;
+
+import com.kkirikkiri.domain.member.entity.Member;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.Optional;
+
+@Repository
+public interface MemberRepository extends JpaRepository<Member, Long> {
+
+    @Override
+    Optional<Member> findById(Long id);
+
+    Optional<Member> findByLoginId(String loginId);
+
+    Optional<Member> findByNickname(String nickname);
+
+    void deleteById(Long id);
+
+    boolean existsByLoginId(String loginId);
+
+    boolean existsByNickname(String nickname);
+}

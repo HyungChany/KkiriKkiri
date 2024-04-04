@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2abc319091fec66eaa2c8965775819395e30ca9d04889ff0a62ba2b0001ca15f
-size 595
+package com.kkirikkiri.domain.book.repository;
+
+import com.kkirikkiri.domain.book.entity.Story;
+import com.kkirikkiri.domain.book.entity.enums.OpenState;
+import com.kkirikkiri.domain.member.entity.Member;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+
+import java.util.List;
+import java.util.Optional;
+
+public interface StoryRepository extends JpaRepository<Story, Long> {
+
+    List<Story> findAllByMemberId(Long memberId);
+    Optional<Story> findById(Long storyId);
+
+    List<Story> findByOpenState(OpenState openState);
+}

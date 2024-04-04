@@ -1,3 +1,32 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e4967aa61ce78e0b5c72406cd90a515f9ccdb9699694294f68c03f0c24da787a
-size 832
+package com.kkirikkiri.domain.book.dto;
+
+import com.kkirikkiri.domain.book.entity.enums.OpenState;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.redis.core.RedisHash;
+
+import java.io.Serializable;
+import java.time.LocalDateTime;
+import java.util.Date;
+import java.util.List;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+@RedisHash(value = "book", timeToLive = 60)
+public class StoryResponse implements Serializable {
+
+    @Id
+    private Long id;
+    private Long memberId;
+    private String memberNickname;
+    private String title;
+    private OpenState openState;
+    private String summary;
+    private LocalDateTime createdAt;
+    private List<ContentResponse> contents;
+}
