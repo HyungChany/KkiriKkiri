@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c7455e4b185c1fb1efb7554f59c4c7b343bc478ef08728ef08eb08c7485aa282
-size 423
+import styled from 'styled-components'
+
+const Sentence = styled.div`
+	width: 100%;
+	min-height: 8rem;
+	height: auto;
+	border-radius: 1.5rem;
+	background-color: #FFF7E7;
+	font-size: 1.5rem;
+	font-family: "Ttangsbudaejjigae OTF";
+	font-weight: 300;
+	/* padding: 1.5rem; */
+	/* padding: 1rem; */
+	text-align: center;
+	line-height: 2.5rem;
+	box-sizing: border-box;
+	margin: 1rem 0rem;
+	display: flex;
+`
+
+export default Sentence
