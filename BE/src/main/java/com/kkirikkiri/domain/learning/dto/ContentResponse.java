@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:cc09221a6fe4e08b890af6ca84ae0bd4843455b11aa2f5e4db3f5fa86b2c0e30
-size 524
+package com.kkirikkiri.domain.learning.dto;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.io.Serializable;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+public class ContentResponse implements Serializable {
+
+    private Long storyId;
+    private Integer lineId;
+    private String koreanSentence;
+    private String translatedSentence;
+    private String imageUrl;
+    private String maleVoiceUrl;
+    private String femaleVoiceUrl;
+
+}

@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3fd0b31afa8ec9cb62d65e1dd453be9b42f2800044baeae0772577dc9ed55712
-size 689
+ package com.kkirikkiri.config;
+
+ import org.springframework.beans.factory.annotation.Value;
+ import org.springframework.context.annotation.Bean;
+ import org.springframework.context.annotation.Configuration;
+ import org.springframework.data.redis.connection.RedisConnectionFactory;
+ import org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory;
+
+ @Configuration
+ public class RedisCacheConfig {
+
+     @Value("${spring.data.redis.host}")
+     private String host;
+     @Value("${spring.data.redis.port}")
+     private int port;
+
+     @Bean
+     public RedisConnectionFactory redisConnectionFactory(){
+         return new LettuceConnectionFactory(host, port);
+     }
+ }

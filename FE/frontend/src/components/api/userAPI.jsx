@@ -1,3 +1,30 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ecbb40bcf2eeb5d2267553184d14ed2742f7095e833738e0ceb4cfd31f6d6811
-size 685
+
+// userAPI.jsx
+
+
+const getUserInfo = async (memberId) => {
+
+  const baseURL = 'https://kkirikkiri.shop/api';
+  try {
+    const response = await fetch(`${baseURL}/members/${memberId}`, {
+      method: 'GET', 
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+
+    if (response.ok) { 
+      const data = await response.json(); 
+      return data; 
+    } else { 
+      console.log('Failed to fetch user info:', response.status); 
+      return null; 
+    }
+  } catch (error) { 
+    console.error('Error fetching user info:', error); 
+    throw error; 
+  }
+};
+
+export default getUserInfo;
+//getUserInfo라는 함수 export 해서 UserStore에서 사용할거임

@@ -1,3 +1,20 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:fbd07e054840b1bc2aeee98866017bb7ff752df1de1131127dd5e6da1b620812
-size 545
+package com.kkirikkiri.domain.bookshelf.dto;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+public class BookshelfResponse {
+
+    private Long storyId; // story PK
+    private String title; // 제목
+    private String author; // 작가 이름
+    private String imageURL; // 썸네일이미지
+    private String summary; // 요약
+    private Boolean isLearned; // 쓰기,말하기 중 하나라도 학습했는지 여부
+}

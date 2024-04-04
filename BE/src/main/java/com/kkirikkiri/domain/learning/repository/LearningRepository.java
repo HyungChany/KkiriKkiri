@@ -1,3 +1,22 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:dec2e139fb0417e4b9a20dfa4115d0760a9ef6a466f763eaf3a5a5e8de427abc
-size 823
+package com.kkirikkiri.domain.learning.repository;
+
+import com.kkirikkiri.domain.learning.entity.Learning;
+import io.lettuce.core.dynamic.annotation.Param;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+
+import java.util.Collection;
+import java.util.List;
+import java.util.Optional;
+
+public interface LearningRepository extends JpaRepository <Learning, Long> {
+    List<Learning> findAllByStoryId(Long storyId);
+
+    Optional<Learning> findById(Long learningId);
+
+    Learning findByMemberIdAndStoryId(Long memberId, Long storyId);
+
+    @Query("SELECT l FROM Learning l WHERE l.member.id = :memberId AND l.story.id = :storyId")
+    Optional<Learning> findByMemberIdAndStoryIdOptional(@Param("memberId") Long memberId, @Param("storyId") Long storyId);
+
+}

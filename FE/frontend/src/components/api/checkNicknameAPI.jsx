@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:da22d97388796b20c4ab16e8b876352ddd2eda9118407dab6c70ac7e038083fd
-size 611
+const Nicknamecheck = async (nickname) => {
+  const baseURL = "https://kkirikkiri.shop/api";
+  try {
+    const response = await fetch(`${baseURL}/members/${nickname}/check-nickname`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    if (response.ok) {
+      const data = await response.json();
+      return data;
+    } else {
+      console.log("Failed to fetch NicknameCheck:", response.status);
+      return null;
+    }
+  } catch (error) {
+    console.error("Error fetching NicknameCheck:", error);
+    throw error;
+  }
+};
+
+export default Nicknamecheck;
