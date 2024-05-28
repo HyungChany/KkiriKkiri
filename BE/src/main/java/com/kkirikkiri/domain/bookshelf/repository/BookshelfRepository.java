@@ -1,22 +1,3 @@
-package com.kkirikkiri.domain.bookshelf.repository;
-
-import com.kkirikkiri.domain.book.entity.Story;
-import com.kkirikkiri.domain.bookshelf.entity.Bookshelf;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Query;
-
-import java.util.List;
-import java.util.Optional;
-
-public interface BookshelfRepository extends JpaRepository<Bookshelf, Long> {
-
-    List<Bookshelf> findByMemberId(Long memberId);
-
-    List<Bookshelf> findByStoryId(Long StoryId);
-
-    Bookshelf findByMemberIdAndStoryId(Long memberId, Long StoryId);
-
-    @Query("SELECT COUNT(DISTINCT b.member) FROM Bookshelf b WHERE b.story = :story")
-    Integer countMembersByStory(Story story);
-}
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:42daf31589f6f0ae6ab594a30f38710a8ab1cfb961dfd07ee0961578457ebf8e
+size 712

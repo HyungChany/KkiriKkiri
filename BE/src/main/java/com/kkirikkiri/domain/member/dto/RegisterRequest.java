@@ -1,31 +1,3 @@
-package com.kkirikkiri.domain.member.dto;
-
-import com.kkirikkiri.domain.member.entity.enums.EnglishLevel;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Size;
-import lombok.Getter;
-import lombok.Setter;
-
-@Getter
-@Setter
-public class RegisterRequest {
-
-    @NotBlank(message = "아이디를 입력해주세요.")
-    private String loginId;
-
-    @NotBlank(message = "비밀번호를 입력해주세요.")
-    @Size(min = 8, max = 15, message = "비밀번호는 8자 이상 15자 이하로 입력해주세요.")
-    private String password;
-
-    @NotBlank
-    private String nickname;
-
-    @NotBlank
-    private Integer age;
-
-    @NotBlank
-    private EnglishLevel level;
-
-    @NotBlank
-    private String thumbnail;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:820b8a7e1e1b0e51b16d3449c75bfb7a2827999e915427f6872f45d8efa852ba
+size 756

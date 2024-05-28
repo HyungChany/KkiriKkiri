@@ -1,12 +1,3 @@
-package com.kkirikkiri.domain.book.dto;
-
-import com.kkirikkiri.domain.book.entity.enums.OpenState;
-import lombok.Getter;
-
-@Getter
-public class ModifyRequest {
-
-    private String title;
-    private String summary;
-    private OpenState openState;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:fa3b6c99467a9661999396a40023b0c016aa8228e5700059138f2eab6f2b3b4a
+size 249

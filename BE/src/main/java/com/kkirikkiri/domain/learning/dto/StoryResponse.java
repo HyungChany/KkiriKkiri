@@ -1,26 +1,3 @@
-package com.kkirikkiri.domain.learning.dto;
-
-import com.kkirikkiri.domain.learning.dto.ContentResponse;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import org.springframework.data.annotation.Id;
-
-import java.io.Serializable;
-import java.util.List;
-
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
-@Builder
-public class StoryResponse implements Serializable {
-
-    @Id
-    private Long id;
-    private Long memberId;
-    private String memberNickname;
-    private String title;
-    private List<ContentResponse> contents;
-    private LearningResponse learning;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:64d57e9dcf142336f76139b6303055a8b4ecf7f2bbc89d23fd4d4da667099041
+size 625

@@ -1,13 +1,3 @@
-package com.kkirikkiri;
-
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
-
-//@SpringBootTest
-class KkirikkiriApplicationTests {
-
-	@Test
-	void contextLoads() {
-	}
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:53366157eee3915da7fcbfc3d12a61d1aef861c10fae479b3cb1c29974162dda
+size 212
